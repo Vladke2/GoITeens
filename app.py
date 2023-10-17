@@ -8,13 +8,13 @@ def main():
     return 'This is a main page'
 
 
-@app.route('birthday')
-def main():
+@app.route('/birthday')
+def age():
     return '05.10.2008'
 
 
-@app.route('name')
-def main():
+@app.route('/name')
+def name():
     return 'Vlad'
 
 
