@@ -1,11 +1,12 @@
-from flask import Flask
+import os
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def main():
-    return 'This is a main page'
+    return render_template('index.html')
 
 
 @app.route('/birthday')
@@ -19,4 +20,4 @@ def name():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=os.getenv("DEBUG"))
