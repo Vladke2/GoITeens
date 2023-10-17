@@ -18,5 +18,10 @@ def name():
     return 'Vlad'
 
 
+@app.route('/hobi')
+def my_hobi():
+    return 'my hobi game'
+
+
 if __name__ == '__main__':
     app.run(debug=True)
