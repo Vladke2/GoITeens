@@ -20,7 +20,7 @@ def name():
 
 @app.route('/hobi')
 def my_hobi():
-    return 'my hobi game'
+    return 'my hobby is a secret'
 
 
 if __name__ == '__main__':
