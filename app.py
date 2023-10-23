@@ -18,8 +18,8 @@ def name():
     return 'Vlad'
 
 
-@app.route('/hobi')
-def my_hobi():
+@app.route('/hobby')
+def my_hobby():
     return 'my hobby is a secret'
 
 
