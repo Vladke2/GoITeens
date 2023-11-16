@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Створення User
+{% endblock %}
+
+{%block content %}
+
+<div class="container mt-5">
+  <p>Добавлення нового користувача</p>
+  <form method="post">
+    <textarea name="username" id="username" class="form-control" placeholder="Введи нікнейм"></textarea>
+    <textarea name="password" id="password" class="form-control" placeholder="Введи пароль"></textarea>
+    <input type="submit" class="btn btm-success"/>
+  </form>
+</div>
+
+{% endblock %}
