@@ -8,7 +8,7 @@
     {% endblock link %}
 </head>
 <body>
-{% block content %}
+
 <header class="p-3 text-bg-dark">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -20,6 +20,9 @@
           <li><a href="http://127.0.0.1:5000/base" class="nav-link px-2 text-secondary">Home</a></li>
           <li><a href="http://127.0.0.1:5000/context" class="nav-link px-2 text-white">Context</a></li>
           <li><a href="http://127.0.0.1:5000/test" class="nav-link px-2 text-white">Test</a></li>
+            <li><a href="http://127.0.0.1:5000/article" class="nav-link px-2 text-white">Створення постів</a></li>
+            <li><a href="http://127.0.0.1:5000/articles" class="nav-link px-2 text-white">Список постів</a></li>
+            <li><a href="http://127.0.0.1:5000/user" class="nav-link px-2 text-white">Створення user </a></li>
 
         </ul>
 
@@ -35,6 +38,6 @@
     </div>
   </header>
 <h1> Title: {{title}}</h1>
-{% endblock content %}
+{% block content %}{% endblock content %}
 </body>
 </html>

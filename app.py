@@ -28,6 +28,33 @@ class Article(db.Model):
         return f'<Article {self.id}>'
 
 
+class User (db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.Text, nullable=False)
+    password = db.Column(db.Integer, nullable=False)
+
+    def __repr__(self):
+        return f'<User {self.id}>'
+
+
+@app.route("/user", methods=['POST', 'GET'])
+def create_user():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        user = User(
+            username=username,
+            password=password,
+        )
+        try:
+            db.session.add(user)
+            db.session.commit()
+            return redirect('/')
+        except Exception as exs:
+            return f'При збереженні запису виникла помилка: {exs}'
+    else:
+        return render_template('user.html')
 
 
 @app.route("/")
