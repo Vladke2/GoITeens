@@ -27,6 +27,8 @@ class Article(db.Model):
     def __repr__(self):
         return f'<Article {self.id}>'
 
+#Home work (07.11)
+
 
 class User (db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -55,6 +57,9 @@ def create_user():
             return f'При збереженні запису виникла помилка: {exs}'
     else:
         return render_template('user.html')
+
+
+# end Home work (07.11)
 
 
 @app.route("/")
