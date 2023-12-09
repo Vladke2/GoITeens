@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+window.onload = function () {
+    let onload_window_zmina = document.getElementById("zmina");
+    let username = prompt("Введіть нікнейм");
+    let password = prompt("Введіть пароль")
+    let result1 = "Ваш нікнейм: " + username;
+    let result2 = "  Ваш пароль: " + password;
+    onload_window_zmina.innerHTML = result1 + result2;
+}
+  </script>
+</head>
+<body>
+<div id="zmina"></div>
+</body>
+</html>
