@@ -26,7 +26,7 @@ class Item(BaseModel):
     description: Optional[str] = Field(..., le=500)
     price: float = Field(..., gt=0)
 
-    @field_validator(price)
+    @field_validator("price")
     @classmethod
     def check_price(cls, value: Any):
         if value > 0:
