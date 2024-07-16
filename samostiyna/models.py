@@ -7,9 +7,9 @@ class User(BaseModel):
     id: int
     name: str = Field(..., gt=2, le=50)
     email: str
-    age: Optional[int] = Field(..., gt=18, le=100)
+    age: Optional[int] = Field(None, gt=18, le=100)
 
-    @field_validator(age)
+    @field_validator("age")
     @classmethod
     def check_age(cls, value: Any):
         if value is not None:
